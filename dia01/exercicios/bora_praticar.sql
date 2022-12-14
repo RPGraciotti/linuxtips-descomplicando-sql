@@ -34,6 +34,10 @@ WHERE
 -- COMMAND ----------
 
 -- 04 Selecione todos os produtos de perfumaria e bebês com altura maior que 5 cm
-
-SELECT *
-FROM silver_olist.
+SELECT
+  *
+FROM
+  silver_olist.produto
+WHERE
+  descCategoria IN ('perfumaria', 'bebes')
+  AND vlAlturaCm > 5

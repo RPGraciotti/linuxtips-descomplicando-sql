@@ -41,7 +41,8 @@ WHERE
 -- COMMAND ----------
 
 SELECT
-  *
+  *,
+  datediff(dtEstimativaEntrega, dtAprovado) AS diffDatasAprovadoPrevisao
 FROM
   silver_olist.pedido
 WHERE descSituacao IN ('shipped', 'canceled')

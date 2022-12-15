@@ -87,9 +87,9 @@ SELECT
 FROM
   silver_olist.pedido
 WHERE
-  DATEDIFF(dtEstimativaEntrega, dtEntregue) < 0
-  AND YEAR(dtPedido) = '2017'
+  YEAR(dtPedido) = '2017'
   AND MONTH(dtPedido) = '12'
+  AND DATE(dtEntregue) > DATE(dtEstimativaEntrega)
 
 -- COMMAND ----------
 
@@ -105,9 +105,10 @@ WHERE
 
 -- Exercício 08: Lista de pedidos com 2 ou mais parcelas menores que 20,00
 SELECT
-  *
+  *,
+  ROUND(vlPagamento / nrPacelas, 2) AS vlParcela
 FROM
   silver_olist.pagamento_pedido
 WHERE
   nrPacelas >= 2
-  AND vlPagamento < 20 -- está tudo certo, não tem pedido que cumpra essas condições
+  AND (vlPagamento / nrPacelas) < 20

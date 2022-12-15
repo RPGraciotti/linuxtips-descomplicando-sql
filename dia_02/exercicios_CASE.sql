@@ -23,3 +23,4 @@ SELECT
   END AS DescFretePct
 FROM
   silver_olist.item_pedido
+--s

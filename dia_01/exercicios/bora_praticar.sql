@@ -33,6 +33,7 @@ WHERE
 
 -- COMMAND ----------
 
+-- DBTITLE 1,Exercicio 02
 -- 04 Selecione todos os produtos de perfumaria e bebês com altura maior que 5 cm
 SELECT
   *

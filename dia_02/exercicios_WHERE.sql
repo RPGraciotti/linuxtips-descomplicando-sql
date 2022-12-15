@@ -88,6 +88,7 @@ FROM
   silver_olist.pedido
 WHERE
   DATEDIFF(dtEstimativaEntrega, dtEntregue) < 0
+  AND descSituacap = 'delivered'
   AND YEAR(dtPedido) = '2017'
   AND MONTH(dtPedido) = '12'
 

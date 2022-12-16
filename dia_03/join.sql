@@ -9,3 +9,4 @@ FROM
   ON T1.idCliente = T2.idCliente -- pegar o idcliente da tabela 1 e fazer a correspondencia com a tabela 2
 
 -- teste update
+-- acho que agora deu tudo certo

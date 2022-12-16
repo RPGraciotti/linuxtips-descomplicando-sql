@@ -28,3 +28,4 @@ ORDER BY
 -- COMMAND ----------
 
 SHOW TABLES FROM silver_olist
+-- como ver todos os dataframes disponiveis
